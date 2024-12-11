@@ -1,0 +1,91 @@
+CREATE TABLE continent (
+    id_continent INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE pays (
+    id_pays INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(200) NOT NULL,
+    population BIGINT NOT NULL,
+    langues VARCHAR(255) NOT NULL,
+    id_continent INT NOT NULL,
+    FOREIGN KEY (id_continent) REFERENCES continent(id_continent)
+);
+
+CREATE TABLE ville (
+    id_ville INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(200) NOT NULL,
+    type ENUM('capitale', 'autre') NOT NULL,
+    id_pays INT NOT NULL,
+    FOREIGN KEY (id_pays) REFERENCES pays(id_pays) ON DELETE CASCADE
+);
+
+
+---script SQL pour ajout d un continent---
+
+SELECT * FROM `continent` WHERE 1;
+
+INSERT INTO continent (nom) VALUES( 'Afrique');
+
+
+
+
+---script SQL pour ajout des pays---
+SELECT * FROM `pays` WHERE 1;
+
+INSERT INTO pays ( nom, population, langues, id_continent)
+VALUES 
+( 'Maroc', 37000000, 'Arabe, Amazigh, Français', 1),
+( 'Egypte', 100000000, 'Arabe', 1),
+( 'Nigeria', 206000000, 'Anglais', 1),
+( 'Kenya', 53000000, 'Anglais, Swahili', 1),
+( 'Tunisie', 11800000, 'Arabe, Français', 1);
+
+
+
+---script SQL pour ajout des villes---
+SELECT * FROM `ville` WHERE 1;
+INSERT INTO ville ( nom, type, id_pays)
+VALUES 
+('Rabat','capitale',1),
+('Casablanca','autre',1),
+('Chefchaouen','autre',1),
+('Agadir','autre',1),
+('Fes','autre',1),
+( 'Caire', 'capitale', 2),
+( 'Alexandrie', 'autre', 2),
+( 'Assouan', 'autre', 2),
+( 'Lúxor', 'autre', 2),
+( 'Sharm el-Sheikh', 'autre', 2),
+( 'Abuja', 'capitale', 3),
+( 'Lagos', 'autre', 3),
+( 'Kano', 'autre', 3),
+( 'Ibadan', 'autre', 3),
+('Nairobi','capitale',4),
+('Mombasa','autre',4),
+('Meru','autre',4),
+('Tunis','capitale',5),
+('Sousse','autre',5),
+('Sfax','autre',5);
+
+
+
+
+---script SQL pour modifier dans un pays ---
+SELECT * FROM `pays` WHERE 1;
+UPDATE pays
+SET population = 38000000, langues = 'Arabe, Amazigh'
+WHERE id_pays = 1;
+
+
+
+---script SQL pour suprimmer dans un pays ---
+SELECT * FROM `pays` WHERE 1;
+DELETE FROM pays WHERE id_pays = 1;
+
+---script SQL pour affichage  ---
+
+SELECT * FROM continent;
+SELECT * FROM pays;
+SELECT * FROM ville;
+
