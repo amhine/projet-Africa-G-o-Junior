@@ -99,8 +99,8 @@
  
     
   </div> -->
-              <div class=" flex  ">
-              <form class=" bg-cover p-4  rounded-2xl w-[700px]" style="margin: 20px;background-image: url('../img/backg.jpg');">
+              <div class=" flex flex-col sm:flex-row ">
+              <form class=" bg-cover p-4  rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
                     <h1 class="flex justify-center font-bold text-amber-900 text-4xl">Pays</h1>
                     <h3 class="text-white">Nom :</h3>
                     <input type="text" id="name" name="name" class="w-full p-2 mb-4 rounded-md bg-gray-200">
@@ -119,7 +119,7 @@
                       
                     </div>
                 </form>
-                  <form  class=" bg-cover p-4 rounded-2xl w-[700px]  " style="margin: 20px;background-image: url('../img/bg.jpg');">
+                  <form  class=" bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] flex flex-col justify-center sm:m-5 m-3 " style="background-image: url('../img/bg.jpg');">
                     <h1 class="flex justify-center font-bold text-amber-900 text-4xl">Villes </h1>
                     <h3 class="text-white">Nom :</h3>
                     <input type="text" id="name" name="name" class="w-full p-2 mb-4 rounded-md bg-gray-200">
