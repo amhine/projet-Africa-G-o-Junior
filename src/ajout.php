@@ -1,6 +1,6 @@
 <?php
 include './cnxdb.php';
-if (isset($_POST['submit'])) {
+if (isset($_POST["submit"])) {
     $nom = $_POST['nom'];
     $population = $_POST['population'];
     $langues = $_POST['langues'];
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($connect, $sql);
 
     if ($result) {
-        header("Location: pays.php?msg=ajouter");
+        header("Location: ajout.php?msg=ajouter");
         exit();
     } else {
         echo "Failed: " . mysqli_error($connect);
@@ -58,10 +58,10 @@ if (isset($_POST['submit'])) {
           <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
         </li>
         <li class="mr-3">
-          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Ajout</a>
+          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="ajout.php">Ajout</a>
         </li>
         <li class="mr-3">
-          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Pays</a>
+          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="read.php">Pays</a>
         </li>
         <li class="mr-3">
           <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Villes</a>
@@ -70,11 +70,6 @@ if (isset($_POST['submit'])) {
       </ul>
     </div>
   </div>
-
-<header></header>
-
-
-
 
               <div class=" flex flex-col sm:flex-row ">
               <form class=" bg-cover p-4  rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">

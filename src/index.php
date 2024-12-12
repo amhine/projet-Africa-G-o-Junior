@@ -39,13 +39,13 @@ include './cnxdb.php';
     <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
       <ul class="list-reset lg:flex justify-end flex-1 items-center">
         <li class="mr-3">
-          <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
+          <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
         </li>
         <li class="mr-3">
           <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="ajout.php">Ajout</a>
         </li>
         <li class="mr-3">
-          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Pays</a>
+          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="read.php">Pays</a>
         </li>
         <li class="mr-3">
           <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Villes</a>
@@ -59,48 +59,8 @@ include './cnxdb.php';
 
 
 
-<!-- 
-        <div class=" flex flex-col sm:flex-row ">
-              <form class=" bg-cover p-4  rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
-                    <h1 class="flex justify-center font-bold text-white text-4xl">Pays</h1>
-                    <h3 class="text-white">Nom :</h3>
-                    <input type="text" id="name" name="name" class="w-full p-2 mb-4 rounded-md bg-gray-200">
 
-                    <h3 class="text-white">Population:</h3>
-                    <input type="text" id="Population" name="Population" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    <h3 class="text-white">Langue :</h3>
-                    <input type="text" id="Langue" name="Langue" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    <h3 class="text-white">Continent:</h3>
-                    <input type="text" id="Continent" name="Continent" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    <div class="flex justify-end mt-6">
-                      <button type="submit" id="submit" class="text-white bg-amber-900 w-36 rounded-2xl py-2 hover:bg-amber-900 cursor-pointer">Submit</button>
-                      
-                    </div>
-                </form>
-                  <form  class=" bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] flex flex-col justify-center sm:m-5 m-3 " style="background-image: url('../img/bg.jpg');">
-                    <h1 class="flex justify-center font-bold text-white text-4xl">Villes </h1>
-                    <h3 class="text-white">Nom :</h3>
-                    <input type="text" id="name" name="name" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    <h3 class="text-white">Description:</h3>
-                    <input type="text" id="Description" name="Description" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    <h3 class="text-white">Type :</h3>
-                    <input type="text" id="Type" name="Type" class="w-full p-2 mb-4 rounded-md bg-gray-200">
-
-                    
-
-                    <div class="flex justify-end mt-6">
-                      <button type="submit" id="submit" class="text-white bg-amber-900 w-36 rounded-2xl py-2 hover:bg-amber-900 cursor-pointer">Submit</button>
-                      
-                    </div>
-                  </form>    
-         </div> -->
-  
-        <div >
+     
           <h1 class="font-bold text-6xl flex justify-center m-6 text-amber-900 ">Afrique</h1>
           <div class="flex flex-col sm:flex-row justify-evenly">
               <div class="sm:m-5 sm:w-[400px] sm:h-[600px] m-3 w-[300px] h[200px]"> 
