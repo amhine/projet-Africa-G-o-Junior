@@ -10,7 +10,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="input.css">
     <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="">
 </head>
 <body>
   <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
@@ -35,10 +34,10 @@
     <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
       <ul class="list-reset lg:flex justify-end flex-1 items-center">
         <li class="mr-3">
-          <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
+          <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
         </li>
         <li class="mr-3">
-          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="ajout.php">Ajout</a>
+          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Ajout</a>
         </li>
         <li class="mr-3">
           <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Pays</a>
@@ -55,8 +54,8 @@
 
 
 
-<!-- 
-        <div class=" flex flex-col sm:flex-row ">
+
+              <div class=" flex flex-col sm:flex-row ">
               <form class=" bg-cover p-4  rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
                     <h1 class="flex justify-center font-bold text-white text-4xl">Pays</h1>
                     <h3 class="text-white">Nom :</h3>
@@ -94,13 +93,8 @@
                       
                     </div>
                   </form>    
-         </div> -->
+               </div>
   
-        <div >
-          <div class="sm:m-5 sm:w-[400px] sm:h-[600px] m-3 w-[200px] h[200px]"> 
-            <img src="../img/carte.webp" alt="">
-          </div>  
-        </div>
 
 <div class="bg-amber-900 p-6">
   <div class="w-full flex flex-col md:flex-row py-6 items-center">
