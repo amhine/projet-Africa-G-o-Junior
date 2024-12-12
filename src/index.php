@@ -1,6 +1,9 @@
 <?php
+include './cnxdb.php';
+
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +16,7 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
+  <header></header>
   <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
 
     <div class="pl-4 flex items-center ">
@@ -97,9 +101,23 @@
          </div> -->
   
         <div >
-          <div class="sm:m-5 sm:w-[400px] sm:h-[600px] m-3 w-[200px] h[200px]"> 
-            <img src="../img/carte.webp" alt="">
-          </div>  
+          <h1 class="font-bold text-6xl flex justify-center m-6 text-amber-900 ">Afrique</h1>
+          <div class="flex flex-col sm:flex-row justify-evenly">
+              <div class="sm:m-5 sm:w-[400px] sm:h-[600px] m-3 w-[300px] h[200px]"> 
+                          <img src="../img/carte.webp" alt="">
+                        </div> 
+                        <div class="sm:m-5 sm:w-[700px] sm:h-[600px] m-3 w-[300px] h[200px]">
+                          <p>
+                          L'Afrique est un continent qui couvre 6 % de la surface de la Terre et 20 % de la surface des terres émergées. Sa superficie est de 30 415 873 km2 avec les îles, ce qui en fait la troisième mondiale si l'on compte l'Amérique comme un seul continent. Sa population de 1,3 milliard d'habitants classe l'Afrique deuxième continent du monde après l'Asie et représente en 2020 17,2 % de la population mondiale.
+
+Le continent est bordé par la mer Méditerranée au nord, par le golfe de Suez, la mer Rouge et le golfe d'Aden au nord-est, par l’océan Indien et le canal du Mozambique au sud-est et par l’océan Atlantique et le golfe de Guinée à l’ouest.
+
+L'Afrique est traversée presque en son milieu par l'équateur et présente plusieurs climats : chaud et humide au plus près de l'équateur, tropical dans les régions comprises entre l'équateur et les tropiques, chaud et aride autour des tropiques, tempéré dans les zones d'altitude. Le continent est caractérisé par le manque de précipitations régulières. En l'absence de glaciers ou de systèmes montagneux aquifères, il n'existe pas de moyen de régulation naturelle du climat à l’exception de la flore (forêts notamment) et de la proximité de la mer. Les terres arides représentent 60 % du continent, dont l'environnement est néanmoins très riche — on l'a appelé le « paradis de la biodiversité » —. Le continent abrite le second massif forestier continu de la planète : la forêt du bassin du Congo, mais qui est menacé par la surexploitation, la déforestation la fragmentation forestière et la baisse de la biodiversité, conséquences de la pression anthropique, exacerbée par le changement climatique.
+                          </p>
+                        </div>
+          </div>
+           
+
         </div>
 
 <div class="bg-amber-900 p-6">

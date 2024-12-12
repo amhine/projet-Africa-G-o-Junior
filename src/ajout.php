@@ -1,4 +1,24 @@
 <?php
+include './cnxdb.php';
+if (isset($_POST['submit'])) {
+    $nom = $_POST['nom'];
+    $population = $_POST['population'];
+    $langues = $_POST['langues'];
+    $id_continent = $_POST['id_continent'];
+
+    $sql = "INSERT INTO Pays (nom, population, langues, id_continent) 
+            VALUES ('$nom', $population, '$langues', 1)";
+
+    $result = mysqli_query($connect, $sql);
+
+    if ($result) {
+        header("Location: pays.php?msg=ajouter");
+        exit();
+    } else {
+        echo "Failed: " . mysqli_error($connect);
+    }
+}
+
 
 ?>
 
@@ -12,6 +32,7 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
+    
   <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
 
     <div class="pl-4 flex items-center ">
@@ -50,7 +71,7 @@
     </div>
   </div>
 
-
+<header></header>
 
 
 

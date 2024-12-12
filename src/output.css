@@ -586,6 +586,10 @@ video {
   margin: 0.75rem;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -692,6 +696,10 @@ video {
 
 .w-\[200\] {
   width: 200;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .flex-1 {
@@ -886,6 +894,11 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-bold {
