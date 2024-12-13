@@ -16,7 +16,7 @@ include './cnxdb.php';
     <link rel="stylesheet" href="">
 </head>
 <body>
-    <header></header>
+    
       <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
 
         <div class="pl-4 flex items-center ">
@@ -35,7 +35,7 @@ include './cnxdb.php';
           </button>
         </div>
 
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-amber-900 " id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
@@ -164,4 +164,14 @@ include './cnxdb.php';
 </div>
 
 </body>
+<script>
+const navToggle = document.getElementById("nav-toggle"); 
+const navContent = document.getElementById("nav-content"); 
+
+navToggle.addEventListener("click", function() {
+   
+    navContent.classList.toggle("hidden");
+});
+
+</script>
 </html>
