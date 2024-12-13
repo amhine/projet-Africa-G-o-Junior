@@ -68,7 +68,7 @@ include './cnxdb.php';
 
     <div class="overflow-x-auto">
         <table class="min-w-full table-auto text-center border-collapse">
-            <thead class="bg-black text-white">
+            <thead class="bg-amber-900 text-white">
                 <tr>
                     <th class="px-4 py-2 border-b">ID</th>
                     <th class="px-4 py-2 border-b">Name</th>

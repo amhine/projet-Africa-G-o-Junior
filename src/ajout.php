@@ -33,20 +33,18 @@ if (isset($_POST["submit"])) {
 
 
 if (isset($_POST["sub"])) {
-    
+
     if (!empty($_POST['nom']) && !empty($_POST['type']) && !empty($_POST['id_pays'])) {
         $nom = $_POST['nom'];
         $type = $_POST['type'];
         $id_pays = $_POST['id_pays'];
 
-        
         $sql = "INSERT INTO `ville` (`nom`, `type`, `id_pays`) 
                 VALUES ('$nom', '$type', '$id_pays')";
 
-       
-        $result = mysqli_query($connect, $sql);
+        $resulta = mysqli_query($connect, $sql);
 
-        if ($result) {
+        if ($resulta) {
             header("Location: ajout.php?msg=ajouter");
             exit();
         } else {
@@ -56,6 +54,7 @@ if (isset($_POST["sub"])) {
         echo "Veuillez remplir tous les champs obligatoires.";
     }
 }
+
 
 ?>
 
@@ -74,45 +73,45 @@ if (isset($_POST["sub"])) {
         <link rel="stylesheet" href="output.css">
     </head>
     <body>
-        <header></header>
-        <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
+        
+            <div class="bg-amber-900 bg-contain  w-full   flex flex-wrap items-center justify-between mt-0 py-2 ">
 
-            <div class="pl-4 flex items-center ">
-     
-                <img src="../img/icon-africa-.png"> 
-                <span class="text-white font-bold text-lg">Africa Géo-Junior</span>
-     
-      
+                <div class="pl-4 flex items-center ">
+        
+                    <img src="../img/icon-africa-.png"> 
+                    <span class="text-white font-bold text-lg">Africa Géo-Junior</span>
+        
+        
+                </div>
+
+                <div class="block lg:hidden pr-4">
+                    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
+                    <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                        <li class="mr-3">
+                            <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="ajout.php">Ajout</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="read.php">Pays</a>
+                        </li>
+                        <li class="mr-3">
+                            <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="readvil.php">Villes</a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-
-            <div class="block lg:hidden pr-4">
-                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
-                <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="index.php">Home</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="ajout.php">Ajout</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="read.php">Pays</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="readvil.php">Villes</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
+        
         <div class="flex flex-col sm:flex-row">
     
 
@@ -145,7 +144,7 @@ if (isset($_POST["sub"])) {
                 <h1 class="flex justify-center font-bold text-white text-4xl">Villes</h1>
 
                 <h3 class="text-white">Nom :</h3>
-                <input type="text" id="nom" name="nom" class="w-full p-2 mb-4 rounded-md bg-gray-200">
+                <input type="text" id="nom" name="nom" class="w-full p-2 mb-4 rounded-md bg-gray-200"required>
 
                 <h3 class="text-white">Pays :</h3>
                 <select id="id_pays" name="id_pays" class="w-full p-2 mb-4 rounded-md bg-gray-200">
