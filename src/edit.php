@@ -1,27 +1,27 @@
 <?php
-// include './cnxdb.php';
+include './cnxdb.php';
 
-// $id_pays = $_GET["id_pays"];
-// if (isset($_POST["submit"])) {
-//     $nom = $_POST['nom'];
-//     $population = $_POST['population'];
-//     $langues = $_POST['langues'];
-//     $id_continent = $_POST['id_continent'];
+$id_pays = $_GET["id_pays"];
+if (isset($_POST["submit"])) {
+    $nom = $_POST['nom'];
+    $population = $_POST['population'];
+    $langues = $_POST['langues'];
+    $id_continent = $_POST['id_continent'];
 
   
-//     $sql = "UPDATE `Pays` SET `langues`='$langues',`population`='$population',`nom`='$nom',`id_continent`='$id_continent' 
-//     WHERE id_pays = $id_pays";
+    $sql = "UPDATE `Pays` SET `langues`='$langues',`population`='$population',`nom`='$nom',`id_continent`='$id_continent' 
+    WHERE id_pays = $id_pays";
     
 
    
-//     $resul = mysqli_query($connect, $sql);
-//     if ($resul) {
-//             header("Location: index.php?msg=Data updated successfully");
-//           } else {
-//             echo "Failed: " . mysqli_error($conn);
-//      }
+    $resul = mysqli_query($connect, $sql);
+    if ($resul) {
+            header("Location: index.php?msg=Data updated successfully");
+          } else {
+            echo "Failed: " . mysqli_error($conn);
+     }
 
-// }
+}
 
 ?>
 
