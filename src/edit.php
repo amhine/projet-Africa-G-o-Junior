@@ -49,7 +49,7 @@ if (isset($_POST["submit"])) {
     ?>
 
     <div class="container d-flex justify-content-center">
-      <form action="" method="POST" class="bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
+        <form action="" method="POST" class="bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
                 <h1 class="flex justify-center font-bold text-white text-4xl"> Pays</h1>
             
                 <label class="text-white" for="nom">Nom :</label>
@@ -67,11 +67,11 @@ if (isset($_POST["submit"])) {
                 </select>
             
                 <div class="flex justify-between mt-6">
-                    <button type="submit" class="text-white bg-blue-600 w-36 rounded-2xl py-2 hover:bg-blue-800 cursor-pointer" name="submit">Update</button>
+                    <button type="submit" class="text-white bg-blue-600 w-36 rounded-2xl py-2 hover:bg-blue-800 cursor-pointer" name="submit"><a href="read.php">Update</a></button>
                     <a href="read.php" class="text-white bg-red-600 w-36 rounded-2xl py-2 hover:bg-red-800 cursor-pointer ">Cancel</a>
                 </div>
                 
-            </form>
+        </form>
     </div>
   </div>
 
