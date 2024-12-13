@@ -72,29 +72,27 @@ include './cnxdb.php';
                 <tr>
                     <th class="px-4 py-2 border-b">ID</th>
                     <th class="px-4 py-2 border-b">Name</th>
-                    <th class="px-4 py-2 border-b">Population</th>
-                    <th class="px-4 py-2 border-b">Langues</th>
-                    <th class="px-4 py-2 border-b">ID Continent</th>
+                    <th class="px-4 py-2 border-b">Type</th>
+                    <th class="px-4 py-2 border-b">ID Pays</th>
                     
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `pays`";
+                $sql = "SELECT * FROM `ville`";
                 $result = mysqli_query($connect, $sql);
                 while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                     <tr class="hover:bg-gray-100">
-                        <td class="px-4 py-2 border-b"><?php echo $row["id_pays"] ?></td>
+                        <td class="px-4 py-2 border-b"><?php echo $row["id_ville"] ?></td>
                         <td class="px-4 py-2 border-b"><?php echo $row["nom"] ?></td>
-                        <td class="px-4 py-2 border-b"><?php echo $row["population"] ?></td>
-                        <td class="px-4 py-2 border-b"><?php echo $row["langues"] ?></td>
-                        <td class="px-4 py-2 border-b"><?php echo $row["id_continent"] ?></td>
+                        <td class="px-4 py-2 border-b"><?php echo $row["type"] ?></td>
+                        <td class="px-4 py-2 border-b"><?php echo $row["id_pays"] ?></td>
                         
-                            <a href="read.php?id_pays=<?php echo $row["id_pays"] ?>" class="text-blue-500 hover:text-blue-700">
+                            <a href="read.php?id_ville=<?php echo $row["id_ville"] ?>" class="text-blue-500 hover:text-blue-700">
                                 <i class="fa-solid fa-pen-to-square text-lg"></i>
                             </a>
-                            <a href="delete.php?id_pays=<?php echo $row["id_pays"] ?>" class="text-red-500 hover:text-red-700">
+                            <a href="delete.php?id_ville=<?php echo $row["id_ville"] ?>" class="text-red-500 hover:text-red-700">
                                 <i class="fa-solid fa-trash text-lg"></i>
                             </a>
                         </td>

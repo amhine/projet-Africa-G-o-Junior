@@ -48,7 +48,7 @@ include './cnxdb.php';
           <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="read.php">Pays</a>
         </li>
         <li class="mr-3">
-          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Villes</a>
+          <a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="readvil.php">Villes</a>
         </li>
 
       </ul>
