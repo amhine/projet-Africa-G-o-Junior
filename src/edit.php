@@ -67,7 +67,7 @@ if (isset($_POST["submit"])) {
                 </select>
             
                 <div class="flex justify-between mt-6">
-                    <button type="submit" class="text-white bg-blue-600 w-36 rounded-2xl py-2 hover:bg-blue-800 cursor-pointer" name="submit"><a href="read.php">Update</a></button>
+                    <button type="submit" class="text-white bg-blue-600 w-36 rounded-2xl py-2 hover:bg-blue-800 cursor-pointer" name="submit">Update</button>
                     <a href="read.php" class="text-white bg-red-600 w-36 rounded-2xl py-2 hover:bg-red-800 cursor-pointer ">Cancel</a>
                 </div>
                 
