@@ -75,15 +75,16 @@ include './cnxdb.php';
                     <th class="px-4 py-2 border-b">Population</th>
                     <th class="px-4 py-2 border-b">Langues</th>
                     <th class="px-4 py-2 border-b">ID Continent</th>
+                    <th class="px-4 py-2 border-b">Action</th>
                     
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $sql = "SELECT * FROM `pays`";
-                $result = mysqli_query($connect, $sql);
-                while ($row = mysqli_fetch_assoc($result)) {
-                ?>
+                    <?php
+                        $sql = "SELECT * FROM `pays`";
+                        $result = mysqli_query($connect, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
                     <tr class="hover:bg-gray-100">
                         <td class="px-4 py-2 border-b"><?php echo $row["id_pays"] ?></td>
                         <td class="px-4 py-2 border-b"><?php echo $row["nom"] ?></td>
@@ -91,11 +92,12 @@ include './cnxdb.php';
                         <td class="px-4 py-2 border-b"><?php echo $row["langues"] ?></td>
                         <td class="px-4 py-2 border-b"><?php echo $row["id_continent"] ?></td>
                         
-                            <a href="read.php?id_pays=<?php echo $row["id_pays"] ?>" class="text-blue-500 hover:text-blue-700">
-                                <i class="fa-solid fa-pen-to-square text-lg"></i>
+                        <td class="flex justify-center px-4 py-2 border-b ">
+                            <a href="edit.php?id_pays=<?php echo $row["id_pays"] ?>" class="text-blue-500 hover:text-blue-700">
+                              <img class="w-4 h-7" src="../img/edit.png"></img>
                             </a>
                             <a href="delete.php?id_pays=<?php echo $row["id_pays"] ?>" class="text-red-500 hover:text-red-700">
-                                <i class="fa-solid fa-trash text-lg"></i>
+                              <img class="w-4 h-7" src="../img/delete.png"></img>
                             </a>
                         </td>
                     </tr>
