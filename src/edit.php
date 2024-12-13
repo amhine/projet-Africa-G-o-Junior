@@ -41,14 +41,14 @@ if (isset($_POST["submit"])) {
 <body>
   
 
-  <div class="container">
+  <div class="">
     <?php
     $sql = "SELECT * FROM `Pays` WHERE id_pays = $id_pays LIMIT 1";
     $resul = mysqli_query($connect, $sql);
     $row = mysqli_fetch_assoc($resul);
     ?>
 
-    <div class="container d-flex justify-content-center">
+    <div class=" flex justify-center ">
         <form action="" method="POST" class="bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
                 <h1 class="flex justify-center font-bold text-white text-4xl"> Pays</h1>
             

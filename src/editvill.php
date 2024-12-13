@@ -38,13 +38,13 @@ if (isset($_POST["sub"])) {
 <body>
   
 
-    <div class="container">
+    <div class="">
         <?php
             $sql = "SELECT * FROM `ville` WHERE id_ville = $id_ville LIMIT 1";
             $res = mysqli_query($connect, $sql);
             $row = mysqli_fetch_assoc($res);
         ?>
-        <div class="flex flex-col sm:flex-row">
+        <div class="flex justify-center">
         <form action="" method="POST" class="bg-cover p-4 rounded-2xl sm:w-[700px] w-[300px] flex flex-col justify-center sm:m-5 m-3" style="background-image: url('../img/bg.jpg');">
                     <h1 class="flex justify-center font-bold text-white text-4xl">Villes</h1>
 
