@@ -10,7 +10,4 @@ if ($resultas) {
   echo "Failed: " . mysqli_error($connect);
 }
 
-
-
-
 ?>
